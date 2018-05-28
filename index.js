@@ -49,8 +49,12 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var position = 0;
-  position = cart.indexOf(`itemName: ${item}`);
+  var position = -1;
+  for (var i = 0; i<cart.length;i++){
+    if (cart[i].itemName === item){
+      positon = i;
+    }
+  }
   if (position >= 0){
     cart.splice(position,1);
     return cart;
