@@ -51,8 +51,11 @@ function removeFromCart(item) {
   // write your code here
   var position = 0;
   position = cart.indexOf(`itemName: ${item}`);
-  if (position>=0){
-    cart.splice(position, 1);
+  if (position = 0){
+    cart.splice(1);
+    return cart;
+  } else if (position > 0){
+    cart = cart.splice(0,positon-1) + [...,cart.splice(position+1)];
     return cart;
   } else {
     return "That item is not in your cart.";
