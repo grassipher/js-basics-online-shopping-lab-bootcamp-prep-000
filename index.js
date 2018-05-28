@@ -52,7 +52,7 @@ function removeFromCart(item) {
   var position = -1;
   for (var i = 0; i<cart.length;i++){
     if (cart[i].itemName === item){
-      positon = i;
+      position = i;
     }
   }
   if (position >= 0){
