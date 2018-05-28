@@ -52,7 +52,7 @@ function removeFromCart(item) {
   var position = 0;
   position = cart.indexOf(`itemName: ${item}`);
   if (position>=0){
-    cart.splice(position, 1);
+    cart.splice(position+1, 1);
     return cart;
   } else {
     return "That item is not in your cart.";
